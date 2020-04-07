@@ -1,18 +1,18 @@
-# mp-docker-spa-host
+# mp-docker-static-host
 
 image of nginx in docker for host static spa website
 
 ## build image and push to repository
 ```
-docker build . -t t-docker-hub.meipian.cn/fore/mp-docker-spa-host:0.0.1
+docker build . -t t-docker-hub.meipian.cn/fore/mp-docker-static-host:0.0.1
 
-docker push t-docker-hub.meipian.cn/fore/mp-docker-spa-host
+docker push t-docker-hub.meipian.cn/fore/mp-docker-static-host
 ```
 
 ## use image
-write a docker file in the project,
+just copy static file to ng folder
 
 ```
-FROM t-docker-hub.meipian.cn/fore/mp-docker-spa-host:0.0.1
+FROM t-docker-hub.meipian.cn/fore/mp-docker-static-host:0.0.1
 COPY view/index.html /var/www/html/   // 将目标文件 copy 到 ng 目录下。
 ```
