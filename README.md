@@ -1,15 +1,15 @@
-# docker-ng-static-host
+# docker-nginx-spa-host
 
-image of nginx in docker for host static spa website
+docker image for hosting static spa website by nginx
 
+## features
 * redirect requests to `index.html` for support spa history mode
 * empty response to `/listen` `GET` request for health check.
 
 ## Use image
-just copy static file to ng folder
 
 ```
-FROM njleonzhang/ng-static-host
+FROM njleonzhang/nginx-spa-host
 COPY view/index.html /var/www/html/  // copy your index.html to nginx folder.
 ```
 
